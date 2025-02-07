@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BodyTec</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div id="welcome-screen" class="overlay">
+        <div class="welcome-box">
+            <h2>Bienvenido a BodyTec</h2>
+            <input type="text" id="username" placeholder="Ingrese su nombre">
+            <button onclick="guardarNombre()">Entrar</button>
+        </div>
+    </div>
+    
+    <div class="main-content" class="hidden">
+        <h1 id="greeting"></h1>
+    </div>
+
+    <script src="funcion.js"></script>
+    
+</body>
+</html>
