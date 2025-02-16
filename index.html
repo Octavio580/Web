@@ -3,24 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BodyTec</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>SemiPrueba Utmach</title>
+    <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
 
-    <div id="welcome-screen" class="overlay">
-        <div class="welcome-box">
-            <h2>Bienvenido a BodyTec</h2>
-            <input type="text" id="username" placeholder="Ingrese su nombre">
-            <button onclick="guardarNombre()">Entrar</button>
-        </div>
-    </div>
-    
-    <div class="main-content" class="hidden">
-        <h1 id="greeting"></h1>
+    <div id="intro-container">
+        <h1>SemiPrueba Utmach</h1>
+        <p><strong>¡Bienvenidos!</strong></p>
+        <p>Antes de comenzar la evaluación, por favor lean atentamente las siguientes indicaciones:</p>
+        
+        <p>✅ La prueba consta de <strong>50 preguntas</strong> que deben responder en <strong>50 minutos</strong>.</p>
+        <p>✅ Se dividirá en <strong>4 bloques</strong> de razonamiento: <strong>Lógico, Verbal, Abstracto y Numérico</strong>, en orden aleatorio.</p>
+        <p>✅ Cada pregunta tiene un valor de <strong>20 puntos</strong>, sumando un total de <strong>1000 puntos</strong>.</p>
+        <p>✅ Una vez iniciado, el tiempo empezará a correr. Al agotarse el tiempo, <br>la prueba se cerrará automáticamente.</p>
+        
+        <p><strong>¡Les deseamos mucho éxito y bendiciones en su evaluación!</strong></p>
+        
+        <button id="start-btn" onclick="startTest()">Iniciar Prueba</button>
     </div>
 
-    <script src="funcion.js"></script>
-    
+    <div id="test-container" class="hidden">
+        <div id="header">
+            <img src="logo_utmach.png" alt="Logo UTMACH" id="logo">
+            <h3>SemiPrueba UTMACH</h3>
+            <div id="timer">50:00</div>
+        </div>
+
+        <div id="question-container">
+            <h3 id="question"></h3>
+            <div id="options-container"></div>
+        </div>
+        <button id="next-btn" class="hidden" onclick="nextQuestion()">Siguiente</button>
+    </div>
+
+    <div id="result-container" class="hidden">
+        <h2>Resultados</h2>
+        <p>Gracias por participar en este simulador, <br> para la prueba del examen de admision a la: <br> Universidad Tecnica de Machala (UTMACH)</p>
+        <p id="score"></p>
+        <button onclick="restartTest()">Volver a intentar</button>
+    </div>
+
+    <script src="Script.js"></script>
 </body>
 </html>
